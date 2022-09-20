@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.less";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="wrap"
+      onClick={() => {
+        fetch("/list.json").then(async (res) => console.log(await res.json()));
+      }}
+    >
+      <div className="sub">元素1</div>
+      <div className="sub">元素2</div>
+      <div className="sub">元素3</div>
+      <div className="sub">元素4</div>
     </div>
   );
 }
-
-export default App;

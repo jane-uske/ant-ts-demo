@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const reg = /^(A|D|W|S){1}\d{1}\w{0}/;
+      // const x = "Z11";
+      // console.log(reg.test(x));
+      // const arr = "A10;S20;W10;D30;X;A1A;B10A11;;A10;"
+      //   .split(";")
+      //   .filter((item) => reg.test(item));
+      // console.log(arr);
+      const arr = "255.254.255.0".split(".");
+      const res = arr.map((x) => Number(x).toString(2)).join("");
+      console.log(res)
+      const num = 32;
+      console.log(num.toString(2));
+    </script>
+  </body>
+</html>

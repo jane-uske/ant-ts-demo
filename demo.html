@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS文字溢出显示提示title或者tooltip</title>
+    <style>
+      div {
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <span class="text">我是一段没有用的废话！</span>
+    </div>
+  </body>
+  <script>
+    let dDom = document.getElementsByClassName("wrap")[0];
+    let sDom = document.getElementsByClassName("text")[0];
+
+    console.log(dDom.offsetWidth, sDom.offsetWidth);
+    let dDomWidth = dDom.offsetWidth;
+    let sDomWidth = sDom.offsetWidth;
+    sDom.addEventListener("mouseover", function () {
+      console.log(dDomWidth, sDomWidth);
+      if (sDomWidth > dDomWidth) {
+        debugger;
+        sDom.title = "我是一段没有用的废话！";
+      }
+    });
+  </script>
+</html>
