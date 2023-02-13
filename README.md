@@ -1,5 +1,4 @@
 [前言](#前言)
-- [ ] 前言
 
 # [Getting Started with Create React App](https//:www.baidu.com)
 
